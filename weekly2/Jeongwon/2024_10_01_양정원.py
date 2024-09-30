@@ -79,3 +79,21 @@ for i in range(1, num+1):
     for k in range(2*i-1):
         print("*", end="")
     print()
+
+# problem_6
+
+import json
+
+data = {
+    'name': 'John',
+    'age' : 30,
+    'city' : 'New York'
+}
+
+with open("data.json", "w") as f:
+    json.dump(data, f)
+
+with open("data.json", "r") as f:
+    data_1 = json.load(f)
+
+print(data_1)
