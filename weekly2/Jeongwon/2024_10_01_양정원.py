@@ -97,3 +97,20 @@ with open("data.json", "r") as f:
     data_1 = json.load(f)
 
 print(data_1)
+
+# problem_7
+
+list_name = [('a', 1), ('b', 2), ('c', 3), ('a', 4)]
+dict_1 = {}
+
+for i, j in (list_name):
+    if i in dict_1:
+        if list_name[i].isinstance(list_name[i],list):
+            continue
+        else:
+            dict_1 = list(list_name[i]).append(j)
+    
+    else:
+        dict_1 = list_name
+        
+print(dict_1)
