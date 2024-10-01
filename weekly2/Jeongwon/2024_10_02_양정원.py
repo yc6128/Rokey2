@@ -1,8 +1,10 @@
 # problem 1
 
 def arr_add(list1, list2):
-    arr_1 = input("array1를 리스트 형식으로 입력하세요: ")
-    arr_2 = input("array2를 리스트 형식으로 입력하세요: ")
+    arr1 = list(map(int, input("첫번째 행을 입력하세요: ")).split())
+    arr2 = list(map(int, input("첫번째 열을 입력하세요: ")).split())
+    arr3 = list(map(int, input("두번째 행을 입력하세요: ")).split())
+    arr4 = list(map(int, input("두번째 열을 입력하세요: ")).split())
 
 
 
