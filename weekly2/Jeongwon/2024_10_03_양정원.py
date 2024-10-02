@@ -56,12 +56,17 @@ dic={'.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
 
 s = input("모스 부호를 입력하세요: ")
 
-list1 = []
 words = s.split("  ")
-list1.append(words)
-print(list1) #[['.... .', '... .-.. . . .--. ...', '. .- .-. .-.. -.--']]
-list2 = []
-for i in list2:
+#print(words)
+
+for i in range(len(words)):
+    words2 = words[i].split(" ")
+    for j in range(len(words2)):
+        if words2[j] in dic:
+            words2[j] = dic[words2[j]]
+    #print(words2, end = "")
+
+print(words2)
 
 '''
 떠오르는 문제 풀이 도구들
