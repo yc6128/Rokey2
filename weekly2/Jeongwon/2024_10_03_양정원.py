@@ -27,3 +27,21 @@ def sol2():
     return answer
 
 print(sol2())
+
+# 2번 다른 풀이
+def sol2():
+    
+    list2 = []
+    for i in range(1,1001):
+        if i % 3 == 0 or i % 5 == 0:
+            list2.append(i)
+    
+    answer = set(list2)
+    
+    sol = 0
+    for i in answer:
+        sol += i
+        
+    return sol
+
+print(sol2())
