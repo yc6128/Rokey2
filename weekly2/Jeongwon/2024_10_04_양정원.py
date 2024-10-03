@@ -32,3 +32,43 @@ def calculation():
  print("0 으로 나눌 수 없습니다.")
   
 calculation()
+
+# problem 3
+# 프로그래머스에 체점 해봤는데 오답이라 다시 풀어보겠습니다.
+
+import random
+
+
+nums_count = random.randint(3,51)
+a = range(1,1001)
+nums = random.sample(a, k=nums_count)
+print(f"숫자가 주어졌습니다. 함수를 사용할 매개 변수를 넣어주세요\n{nums}")
+s = list(map(int, input("숫자 입력: ").split()))
+
+def solution():
+    total = 0
+    set_count = len(set(s) & set(nums))
+    if set_count == 3:
+        for i in s:
+            total += i
+
+    else:
+        k = sorted(list(set(s).difference(nums)))
+        print(f"숫자{k}가 리스트에 없습니다.")
+
+    print(f"더하면 나오는 숫자: {total}")
+
+    
+    if total < 2:
+        return f"{total}은 소수가 아닙니다."
+    
+    for i in range(2, int(total**0.5)+1):
+        if total % i == 0:
+            return f"{total}은 소수가 아닙니다."
+    
+    else:
+        return f"{total}은 소수입니다."
+   
+print(solution())
+
+
