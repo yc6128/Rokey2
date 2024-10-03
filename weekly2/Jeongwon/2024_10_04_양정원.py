@@ -34,30 +34,37 @@ def calculation():
 calculation()
 
 # problem 3
-# 프로그래머스에 체점 해봤는데 오답이라 다시 풀어보겠습니다.def solution(nums):
-    
-    if 3 <= len(nums) <= 50:
-        for i in nums:
-            for  in nums:
-                for k in nums:
-                    plus = nums[i] + nums[j] + nums[k]
+def prime(result):
 
-                    if plus < 2:
-                        pass
+    if result < 2:
+        return
 
-                    for a in range(2, int(plus**0.5)+1):
-                        if plus % a == 0:
-                            pass
-                
-                    
-                    else:
-                        return f"{[i,j,k]}를 이용해서 {plus}를 만들 수 있습니다."
+    for a in range(2, int(result**0.5)+1):
+        if result % a == 0:
+            return
         
     else:
-        print("숫자는 3개 이상 50개 이하여야 합니다.")
+        return result
 
+def solution(nums):
+    lst = []
+    i = 0
+    for i in range(i,len(nums)-2):
+        for j in range(i+1,len(nums)-1):
+            for k in range(j+1, len(nums)):
+                result = nums[i]+nums[j]+nums[k]
+                if result == prime(result):
+                    lst.append(sorted([nums[i],nums[j],nums[k]]))
+    '''
+    for i in lst:
+        sums = sum(i)
+        print(f"{i}를 이용해서 {sums}을 만들 수 있습니다.") 
+    ''' 
+    
+    return len(lst)
 
-print(solution([1,2,7,6,4]))
+nums = [1,2,7,6,4]
+solution(nums)
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 import random
