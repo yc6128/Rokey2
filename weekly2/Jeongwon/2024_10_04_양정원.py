@@ -34,7 +34,31 @@ def calculation():
 calculation()
 
 # problem 3
-# 프로그래머스에 체점 해봤는데 오답이라 다시 풀어보겠습니다.
+# 프로그래머스에 체점 해봤는데 오답이라 다시 풀어보겠습니다.def solution(nums):
+    
+    if 3 <= len(nums) <= 50:
+        for i in nums:
+            for  in nums:
+                for k in nums:
+                    plus = nums[i] + nums[j] + nums[k]
+
+                    if plus < 2:
+                        pass
+
+                    for a in range(2, int(plus**0.5)+1):
+                        if plus % a == 0:
+                            pass
+                
+                    
+                    else:
+                        return f"{[i,j,k]}를 이용해서 {plus}를 만들 수 있습니다."
+        
+    else:
+        print("숫자는 3개 이상 50개 이하여야 합니다.")
+
+
+print(solution([1,2,7,6,4]))
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 import random
 
@@ -68,7 +92,7 @@ def solution():
     
     else:
         return f"{total}은 소수입니다."
-   
+  
 print(solution())
 
 
