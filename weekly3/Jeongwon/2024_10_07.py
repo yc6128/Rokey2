@@ -42,3 +42,20 @@ def solution(brown, yellow):
 
 
 print(solution(10,2))
+
+#problem 3
+def solution(people, limit):
+    count = 0
+    for i in range(len(people)):
+        for j in range(i+1,len(people)-1):
+            if people[i] + people[j] <= limit:
+                count += 1
+                del people[i], people[j]
+        else:
+            return len(people)
+    
+    return count
+
+print(solution([70, 80, 50],100))
+                
+        
