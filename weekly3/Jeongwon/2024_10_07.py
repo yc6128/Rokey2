@@ -19,3 +19,13 @@ def solution(s):
     return False
 
 print(solution("(()("))
+
+#problem 2
+def solution(brown, yellow):
+    extent = brown + yellow
+    for i in range((brown//2)-1, 0, -1):
+        if extent % i ==0:
+            return [i, extent//i]
+
+
+print(solution(10,2))
