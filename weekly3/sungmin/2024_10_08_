@@ -41,7 +41,7 @@ def solution(new_id):
 #         else:
 #             temp += i 
 #             if temp in words: 
-#                 result.append(num_words[temp])  
+#                 result.append(words[temp])  
 #                 temp = ""  
     
 # ######    return int("".join(result))
