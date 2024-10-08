@@ -1,0 +1,50 @@
+#===========================================================================
+#problem_1
+def solution(new_id):
+    new_id = new_id.lower()   ## 1단계
+
+    ch = list("abcdefghijklmnopqrstuvwxyz0123456789-_,.")     ####2단계
+
+
+
+    new_id = new_id.strip('.')   ###4단계
+
+    if new_id == '':    ###5단계
+        new_id = 'a'
+
+    new_id = new_id[:15]     ###6단계
+    
+
+#===========================================================================
+#problem_2
+
+# def solution(s):
+#     words = {
+#         "zero": "0",
+#         "one": "1",
+#         "two": "2",
+#         "three": "3",
+#         "four": "4",
+#         "five": "5",
+#         "six": "6",
+#         "seven": "7",
+#         "eight": "8",
+#         "nine": "9"
+#     }
+    
+#     result = []
+#     temp = ""
+    
+#     for i in s:
+#         if i.isdigit():  
+#             result.append(i)
+#         else:
+#             temp += i 
+#             if temp in words: 
+#                 result.append(num_words[temp])  
+#                 temp = ""  
+    
+# ######    return int("".join(result))
+
+# s="one4seveneight"
+# print(solution(s))
