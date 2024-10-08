@@ -1,5 +1,34 @@
 # problem 1
+def solution(new_id):
+    new_id = new_id.lower()
+    result = []
 
+    for i in new_id:
+        if i.isalnum() or i in ['-','_','.']:
+            result.append(i)
+
+    result = ''.join(result)
+
+    while ".." in result:
+        result=result.replace("..",'.')
+    
+    result = result.strip(".")
+    
+    if result == "":
+        result = 'a'
+    
+    elif len(result) >= 16:
+        result = result[:15]
+        if result[-1] == '.':
+            result = result[:-1]
+    
+   
+    while len(result) <3:
+        result += result[-1]
+    
+
+    return result
+    
 
 
 
