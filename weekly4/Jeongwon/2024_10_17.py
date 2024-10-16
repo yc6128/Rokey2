@@ -7,7 +7,7 @@ def calculation(num):
             k = num % 10
             sum1 += k**2
             num = num // 10
-        print(sum1)
+        # print(sum1)
 
         num = sum1
     return num == 1
