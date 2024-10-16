@@ -24,3 +24,32 @@ def happy_num(range_num):
 
 
 print(happy_num(99))
+
+#problem 2
+
+def parallel(num):
+    return 60 * num
+
+def serial(num):
+    sum1 = 0
+    for i in range(num):
+        sum1 += 1/60
+    if num == 0:
+        return 0
+    return 1/sum1
+
+def solution(num):
+    set1 = set()
+    for i in range(num):
+        for j in range(num):
+            set1.add(parallel(i)+serial(j))
+            # print(parallel(i),serial(j))
+            
+
+    count1 = len(set1)
+    
+    return count1
+
+
+print(solution(18))
+
